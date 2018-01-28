@@ -8,7 +8,7 @@ import datetime
 
 from os import system 
 io.setmode(io.BCM)
-SHUTOFF_DELAY = 5  # seconds
+SHUTOFF_DELAY = 60  # seconds
 PIR_PIN = 23       # Pin 26 on the board
 ALIVE_START = datetime.time(6, 15)
 ALIVE_END = datetime.time(22, 30)
