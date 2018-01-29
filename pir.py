@@ -17,12 +17,12 @@ def main():
     io.setup(PIR_PIN, io.IN)
     turned_off = False
     last_motion_time = time.time()
-    now_time = datetime.datetime.now().time()
 
     while True:
         if io.input(PIR_PIN):
             last_motion_time = time.time()
             sys.stdout.flush()
+            now_time = datetime.datetime.now().time()
             if turned_off and time_in_range(ALIVE_START, ALIVE_END, now_time):
                 turned_off = False
                 turn_on()
